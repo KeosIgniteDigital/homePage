@@ -4,29 +4,23 @@ import { createTheme } from "@mui/material/styles";
 let mainTheme = createTheme({
   palette: {
     primary: {
-      main: "#4800C7",
-      mainGradient:
-        "radial-gradient(circle, #020024 0%, #090979 35%, #00d4ff 100%)",
-      tonalOffset: 0.05,
-
+      main: "#82c3f5",
       // main: "#C70039",
-      light: "#FFC300",
-      contrastText: "#FF7F50",
+      light: "#689cc4 ",
+      contrastText: "#FCC92C",
+      dark: "#486d89",
     },
     secondary: {
-      main: "#FCC92C",
-      light: "#FFC300",
+      main: "#f91c85",
+      light: "#ff86c0",
     },
     warning: {
-      main: "#E5AB2C",
+      main: "#eea4af",
       contrastText: "#FFFFFF",
     },
     text: {
       primary: "#C70039",
       secondary: "#6c6c6c",
-    },
-    indigo: {
-      300: "#EFEFEF",
     },
 
     gradientBlue: "radial-gradient(circle, #88DBFF 0%, #43C0F6 60%)",
@@ -34,9 +28,9 @@ let mainTheme = createTheme({
   },
 
   typography: {
-    fontFamily: ["consolas", "monospace", "sans-serif"].join(","),
+    fontFamily: ["Candara", "times new roman", "sans-serif"].join(","),
     nunito: {
-      fontFamily: ["helvetica", "times new roman", "sans-serif"].join(","),
+      fontFamily: ["Signika", "Signika-Light", "Signika-bold"].join(","),
     },
   },
   shape: {
@@ -53,6 +47,7 @@ mainTheme = createTheme(mainTheme, {
         root: {
           borderRadius: "7px",
           fontFamily: "Nunito, sans-serif",
+          color: "#43C0F6",
           fontWeight: "900",
           minWidth: "175px",
           fontSize: "20px",
@@ -62,12 +57,25 @@ mainTheme = createTheme(mainTheme, {
           padding: "11px 20px 9px 20px",
         },
         outlined: {
-          border: `3px solid ${mainTheme.palette.primary.main}`,
-          color: mainTheme.palette.text.secondary,
-          backgroundColor: "#C70039",
+          border: `3px solid #f91c85`,
+          color: `#f91c85`,
+          backgroundColor: "#f91c85",
           padding: "7px 20px",
           "&:hover": {
-            border: `3px solid ${mainTheme.palette.primary.dark}`,
+            border: `3px solid #f91c85`,
+          },
+          blueFull: {
+            backgroundColor: "#43C0F6",
+            border: "2px solid #43C0F6",
+            color: "#ffffff",
+            padding: "110%",
+            Width: "330px",
+
+            "&:hover": {
+              color: "#43C0F6",
+              background: "white",
+              border: "12px solid #2bb8f5",
+            },
           },
         },
       },
@@ -95,7 +103,7 @@ mainTheme = createTheme(mainTheme, {
       fontFamily: mainTheme.typography.nunito.fontFamily,
     },
     h3: {
-      fontSize: "1.875rem", // = 30px
+      fontSize: "25px", // = 30px
       fontWeight: "700",
       fontFamily: mainTheme.typography.nunito.fontFamily,
       color: mainTheme.palette.text.secondary,
@@ -117,6 +125,12 @@ mainTheme = createTheme(mainTheme, {
       fontWeight: "700",
       fontFamily: mainTheme.typography.nunito.fontFamily,
       color: mainTheme.palette.text.secondary,
+    },
+    p: {
+      fontSize: "1.25rem", // = 20px
+      fontWeight: "700",
+      fontFamily: mainTheme.typography.nunito.fontFamily,
+      color: "gray",
     },
   },
 });
